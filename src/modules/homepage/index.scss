@@ -1,0 +1,66 @@
+@import '../../styles/variable';
+@import 'src/styles/mixin';
+
+.homepage {
+	background: #ffffff;
+
+	h1 {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 38px;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	h4 {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		margin-bottom: 0;
+		line-height: 28px;
+	}
+
+	h6 {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	// >.header {
+	// 	// &.shrink {
+	// 	// 	.logo__wrapper {
+	// 	// 		&::before {
+	// 	// 			display: none;
+	// 	// 		}
+	// 	// 	}
+	// 	// }
+
+	// 	// .logo__wrapper {
+	// 	// 	&::before {
+	// 	// 		content: '';
+	// 	// 		position: absolute;
+	// 	// 		top: -64px;
+	// 	// 		left: -32px;
+	// 	// 		width: 158px;
+	// 	// 		height: 158px;
+	// 	// 		z-index: -1;
+	// 	// 		background-image: url("/assets/images_2/yellow-in-banner.svg");
+
+	// 	// 		@include tablet {
+	// 	// 			display: none;
+	// 	// 		}
+	// 	// 	}
+	// 	// }
+	// }
+}
+
+body > iframe {
+	display: none !important;
+}

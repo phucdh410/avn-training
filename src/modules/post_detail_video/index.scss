@@ -1,0 +1,29 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+
+.post-video-detail {
+	background-color: $color-white;
+
+	.text__wrapper {
+		position: relative;
+
+		&::before,
+		&::after {
+
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 50%;
+		}
+
+		&::before {
+			top: 0;
+			background-color: white;
+		}
+
+		&::after {
+			bottom: 0;
+			background-color: #fffaf6;
+		}
+	}
+}

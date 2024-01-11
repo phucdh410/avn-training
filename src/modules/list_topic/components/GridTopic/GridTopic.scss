@@ -1,0 +1,227 @@
+@use '../../../../styles/mixin'as *;
+
+.list__topic-wrap {
+	.list__topic {
+		position: relative;
+		background: #f9fafe;
+		padding: 80px 120px;
+		@include flex(unset, center);
+		flex-direction: column;
+
+		@include tablet-2 {
+			padding: 20px;
+		}
+
+		@include tablet {
+			padding: 80px 75px;
+		}
+
+		@include mobile {
+			padding: 20px 20px 80px 20px;
+		}
+
+		& > div {
+			margin: auto;
+			max-width: 1140px;
+		}
+
+		&__header {
+			@include flex(unset, space-between);
+			width: 100%;
+			height: 56px;
+			margin-bottom: 45px !important;
+
+			@include mobile {
+				@include flex(center, center);
+				flex-direction: column;
+				margin-bottom: 70px;
+			}
+
+			&__title {
+				font-family: $font-family;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 40px;
+				line-height: 56px;
+				color: #000029;
+				flex: none;
+				order: 0;
+				flex-grow: 0;
+
+				@include tablet-2 {
+					font-size: 32px;
+					line-height: 40px;
+					margin-bottom: 20px;
+					height: 40px;
+				}
+
+				@include mobile {
+					font-size: 26px;
+					line-height: 40px;
+					margin-bottom: 0;
+				}
+			}
+
+			&__search {
+				position: relative;
+				width: 100%;
+				max-width: 461px;
+				border: 1px solid #000000;
+				box-sizing: border-box;
+				border-radius: 100px;
+				padding: 0px 16px;
+				margin-left: 20px;
+				@include flex(center, space-between);
+
+				@include laptop {
+					width: 350px;
+				}
+
+				@include tablet-2 {
+					margin: 0 !important;
+					width: 300px;
+				}
+
+				@include tablet {
+					margin: 0 !important;
+				}
+
+				@include mobile {
+					width: 100%;
+					margin: 0;
+					padding: 10px 16px;
+				}
+
+				&__input {
+					font-family: $font-family;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 19px;
+					width: 100%;
+					color: #596585;
+					border: none;
+					outline: none;
+					background-color: transparent;
+
+					@include tablet-2 {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		&__body {
+			width: 100%;
+
+			@include flex(unset, unset);
+
+			@include tablet {
+				flex-direction: column;
+
+				margin-bottom: 50px;
+			}
+
+			&__filter {
+				width: 270px;
+				margin-right: 24px;
+
+				@include tablet {
+					width: 100%;
+					margin-bottom: 30px;
+				}
+			}
+
+			&__grid {
+				&--item {
+					img {
+						width: 267.17px;
+						height: 149px;
+					}
+
+					&__title {
+						margin: 20px 0px;
+						color: #000029;
+					}
+
+					&__desc {
+						font-family: $font-family;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 19px;
+						color: #122654;
+						flex: none;
+						order: 1;
+						flex-grow: 0;
+						margin: 16px 0;
+						text-align: left;
+
+						@include mobile {
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+
+		&__footer {
+			@include flex(center, right);
+
+			@include tablet {
+				@include flex(center, center);
+			}
+
+			&__item {
+				margin: 0 8px;
+				@include flex(center, unset);
+
+				@include mobile {
+					margin: 0;
+				}
+
+				&--number {
+					margin: 0 8px;
+					width: 24px;
+					height: 24px;
+					@include flex(center, unset);
+
+					@include mobile {
+						width: 10px;
+						height: 10px;
+					}
+
+					&:first-child {
+						background: #4f71ec;
+						border-radius: 100px;
+						padding: 8px;
+						color: white;
+
+						@include mobile {
+							padding: 10px 15px 10px 8px;
+						}
+					}
+				}
+			}
+
+			&__first-page {
+				font-family: $font-family;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 19px;
+				color: #858ea7;
+				opacity: 0.5;
+			}
+
+			&__first-page,
+			&__last-page {
+				font-size: 13px;
+			}
+		}
+
+		.paging-common-wrap {
+			margin: 0 0 0 auto;
+		}
+	}
+}

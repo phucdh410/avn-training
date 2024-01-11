@@ -1,0 +1,214 @@
+@use '../../../../styles/mixin'as *;
+
+.rule-detail {
+	margin-bottom: 100px;
+	position: relative;
+	height: 492px;
+	width: 100%;
+	// padding: 0 150px;
+	max-width: 1140px;
+	margin: 60px auto 110px auto;
+
+	@include tablet {
+		padding: 0 60px;
+	}
+
+	@include mobile {
+		padding: 0 16px;
+		height: 880px;
+		margin-bottom: 60px;
+	}
+
+	&__blur {
+		background: #e5f4ee;
+		z-index: 1;
+		backdrop-filter: blur(16px);
+		border-radius: 80px 0px;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		@include flex(center, unset);
+
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		z-index: 99;
+		width: 50%;
+		height: 100%;
+		position: relative;
+
+		@include tablet {
+			margin: 0 40px;
+		}
+
+		@include mobile {
+			width: 100%;
+		}
+
+		&__girl {
+			position: absolute;
+			right: 0;
+			padding-top: 40px;
+			z-index: 99;
+
+			@include tablet {
+				padding-top: 90px;
+			}
+
+			@include mobile {
+				padding-top: 30px;
+				padding-left: 50px;
+			}
+		}
+
+		&__look {
+			position: absolute;
+			width: 413px;
+			height: 421px;
+			right: 0;
+			bottom: -30px;
+			z-index: 99;
+
+			@include tablet {
+				bottom: 50px;
+				width: 320px;
+				height: 320px;
+			}
+
+			@include mobile {
+				bottom: 84px;
+				width: 260px;
+				height: 260px;
+				right: 20px;
+			}
+		}
+
+		&__rec-top {
+			position: absolute;
+			top: 38px;
+			right: 80px;
+
+			@include tablet {
+				top: 88px;
+				right: 56px;
+				width: 16%;
+			}
+
+			@include mobile {
+				top: 30px;
+				right: 56px;
+				width: 14%;
+			}
+		}
+
+		&__rec-bot {
+			position: absolute;
+			top: 185px;
+			right: 80px;
+
+			@include tablet {
+				top: 192px;
+				right: 58px;
+				width: 16%;
+			}
+
+			@include mobile {
+				top: 134px;
+				right: 58px;
+				width: 14%;
+			}
+		}
+
+		&__blur-oran {
+			position: absolute;
+			right: -200px;
+			z-index: 1;
+			opacity: 0.5;
+
+			@include mobile {
+				right: 0;
+			}
+		}
+
+		&__blur-pur {
+			position: absolute;
+			right: 8px;
+			z-index: 1;
+			opacity: 1;
+
+			@include mobile {
+				right: 0;
+			}
+		}
+	}
+
+	&__right {
+		width: 50%;
+		height: 100%;
+		@include flex(center, center);
+		flex-direction: column;
+		z-index: 100;
+
+		@include mobile {
+			width: 100%;
+			justify-content: flex-start;
+		}
+
+		&__title {
+			color: #000029;
+			width: 100%;
+			text-align: left;
+			padding-left: 30px;
+			margin-bottom: 12px;
+
+			@include mobile {
+				text-align: center;
+				padding: 0;
+			}
+		}
+
+		&__list {
+			max-width: 500px;
+			padding-right: 20px;
+
+			@include mobile {
+				max-width: 100%;
+				padding: 0 20px;
+			}
+		}
+
+		&__item {
+			@include flex(center, unset);
+			padding: 24px;
+			background: #ffffff;
+			border-radius: 16px;
+			margin-bottom: 10px;
+
+			&__icon {
+				padding: 8px;
+				background: #e5f4ee;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+
+			&__img {
+				padding: 8px;
+				background: #e5f4ee;
+			}
+
+			&__txt {
+				font-family: 'Work Sans';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+				color: #000029;
+				padding-left: 10px;
+				width: 100%;
+			}
+		}
+	}
+}

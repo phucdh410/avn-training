@@ -1,0 +1,613 @@
+@import '../../styles/';
+@import '../../styles/mixin';
+
+/*App left*/
+.app {
+	height: 100vh;
+	background-image: url('/assets/images_2/background.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	span {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	h2 {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 33px;
+	}
+
+	p {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	background-color: $body-bg;
+
+	position: relative;
+	overflow-x: hidden;
+
+
+	@include mobile {
+		height: 900px;
+	}
+
+	&__wrapper {
+		max-width: 1440px;
+		margin: auto;
+	}
+
+	&__left {
+		z-index: 999;
+		position: relative;
+		width: 50%;
+
+		@include tablet {
+			width: 100%;
+		}
+
+		&__logo {
+			position: absolute;
+			width: 124px;
+			height: 88px;
+			left: 150px;
+			top: 58px;
+
+			@include tablet {
+				width: 100%;
+				left: 0;
+				@include flex(unset, center);
+			}
+
+			img {
+				width: 124px;
+				height: 88px;
+			}
+		}
+
+		&__wrap {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0px;
+
+			position: absolute;
+			width: 364px;
+			height: 345px;
+			left: 150px;
+			top: 230px;
+
+			@include tablet {
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 345px;
+				left: 0;
+			}
+		}
+
+		&__header {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0px;
+
+			position: static;
+			width: 364px;
+			height: 87px;
+			left: 0px;
+			top: 0px;
+
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: 0px 0px 40px 0px;
+
+			&__login {
+				color: $log-in;
+				position: static;
+				width: 364px;
+				height: 33px;
+				left: 0px;
+				top: 0px;
+				line-height: 32.84px;
+
+				flex: none;
+				order: 0;
+				align-self: stretch;
+				flex-grow: 0;
+				margin: 16px 0px;
+
+			}
+
+			&__desc {
+				position: static;
+				width: 364px;
+				height: 38px;
+				left: 0px;
+				top: 49px;
+				color: $content;
+				line-height: 18.77px;
+
+				flex: none;
+				order: 1;
+				align-self: stretch;
+				flex-grow: 0;
+				margin: 16px 0px;
+
+			}
+		}
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0px;
+			position: static;
+			width: 364px;
+			height: 218px;
+			left: 0px;
+			top: 127px;
+			flex: none;
+			order: 1;
+			flex-grow: 0;
+			margin: 10px 0px;
+
+			&__user {
+				position: relative;
+				width: 364px;
+				height: 65px;
+				left: 0px;
+				top: 0px;
+				flex: none;
+				order: 0;
+				flex-grow: 0;
+				margin: 24px 0px;
+
+				&--name {
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					padding: 0px 2px;
+					background: #e5f4ee;
+					position: absolute;
+					width: 106px;
+					height: 14px;
+					left: 16px;
+					top: 0.5px;
+					z-index: 100;
+
+					&__heading {
+						position: static;
+						width: 102px;
+						height: 14px;
+						left: 2px;
+						top: 0px;
+						flex: none;
+						order: 0;
+						flex-grow: 0;
+						color: $sub-text;
+						line-height: 14.08px;
+						@include flex(center, unset);
+
+						a {
+							color: rgb(91, 217, 170);
+						}
+
+						span {
+							color: red;
+						}
+					}
+				}
+
+				&__input {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					padding: 16px;
+
+					position: absolute;
+					width: 100%;
+					height: 56px;
+					left: 0px;
+					top: 9px;
+					border: 1px solid #b5bacb;
+					box-sizing: border-box;
+					border-radius: 8px;
+
+					&__mail {
+						position: static;
+						width: 24px;
+						height: 24px;
+						left: 16px;
+						top: 16px;
+						flex: none;
+						order: 0;
+						flex-grow: 0;
+						margin: 0px;
+						color: #596585;
+
+					}
+
+					&__name {
+						position: static;
+						background: transparent;
+						border: none;
+						width: 90% !important;
+						left: 56px;
+						top: 20px;
+
+						font-family: $font-family;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 14px;
+						line-height: 16px;
+						color: #000029;
+						flex: none;
+						order: 1;
+						flex-grow: 0;
+						margin: 0px 16px;
+					}
+				}
+			}
+
+			&__password {
+				position: relative;
+				width: 364px;
+				height: 65px;
+				left: 0px;
+				top: 0;
+				flex: none;
+				order: 1;
+				flex-grow: 0;
+				margin: 0px;
+
+				&--name {
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					padding: 0px 2px;
+					position: absolute;
+					width: 66px;
+					height: 14px;
+					left: 16px;
+					top: 0.5px;
+					background: #e5f4ee;
+					z-index: 100;
+
+					&__heading {
+						position: static;
+						width: 62px;
+						height: 14px;
+						left: 2px;
+						top: 0px;
+						color: #858ea7;
+						flex: none;
+						order: 0;
+						flex-grow: 0;
+						margin: 0px;
+						@include flex(center, unset);
+
+						a {
+							color: rgb(91, 217, 170);
+						}
+
+						span {
+							color: red;
+						}
+					}
+				}
+
+				&__input {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					padding: 16px;
+					position: absolute;
+					width: 100%;
+					height: 56px;
+					left: 0px;
+					top: 9px;
+					border: 1px solid #b5bacb;
+					box-sizing: border-box;
+					border-radius: 8px;
+
+					&__name {
+						position: static;
+						background: transparent;
+						border: none;
+
+						width: 90% !important;
+						left: 56px;
+						top: 20px;
+
+						font-family: $font-family;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 14px;
+						line-height: 16px;
+						color: #122654;
+						flex: none;
+						order: 1;
+						flex-grow: 0;
+						margin: 0px 16px;
+					}
+
+					&__pass {
+						position: static;
+						width: 24px;
+						height: 24px;
+						left: 16px;
+						top: 16px;
+						flex: none;
+						order: 0;
+						flex-grow: 0;
+						margin: 0px;
+						color: #122654;
+						border-radius: 15px;
+					}
+				}
+			}
+
+			&__default {
+				position: absolute;
+				width: 174px;
+				height: 14px;
+				left: 0px;
+				bottom: 8px;
+				font-family: $font-family;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 14px;
+				color: #122654;
+			}
+
+			&__btn {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				padding: 8px 15px;
+				cursor: pointer;
+				position: static;
+				width: 127px;
+				height: 40px;
+				left: 0px;
+				top: 178px;
+				background: #4f71ec;
+				border-radius: 100px;
+				flex: none;
+				order: 2;
+				flex-grow: 0;
+				margin: 4px 0;
+				color: $color-white;
+				border: none;
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: #3c56b3;
+					color: $color-white;
+				}
+
+				&__name {
+					position: static;
+					width: 63px;
+					height: 14px;
+					left: 16px;
+					top: 13px;
+					font-family: $font-family;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 14px;
+					color: #ffffff;
+					flex: none;
+					order: 0;
+					flex-grow: 0;
+					margin: 0px 0px 0px 8px;
+				}
+
+				&__icon {
+					position: static;
+					width: 24px;
+					height: 24px;
+					left: 87px;
+					top: 8px;
+					flex: none;
+					order: 1;
+					flex-grow: 0;
+					margin: 0px 0px 0px 10px;
+				}
+
+				@include tablet {
+					margin: 0 0 0 auto;
+				}
+			}
+		}
+
+		&__footer {
+			&__copy {
+				position: absolute;
+				width: 217px;
+				height: 14px;
+				left: 150px;
+				top: 846px;
+				font-family: $font-family;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 14px;
+				color: #858ea7;
+
+				@include mobile {
+					width: 100%;
+					text-align: center;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	&__frame__color {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0px;
+		z-index: 100;
+		position: absolute;
+		width: 122px;
+		height: 383.16px;
+		right: 92%;
+		top: 23%;
+
+		@include tablet {
+			left: 0;
+			right: unset;
+		}
+
+		@include mobile {
+			width: 70px;
+		}
+	}
+
+	&__frame__tran {
+		position: absolute;
+		width: 122px;
+		height: 513px;
+		right: 2%;
+		top: 2%;
+		z-index: 100;
+
+		@include tablet {
+			right: 0;
+		}
+
+		@include mobile {
+			top: 0;
+			width: 70px;
+		}
+	}
+
+	&__right {
+		position: static;
+		width: 50%;
+		height: 900px;
+		left: 1440px;
+		top: 0px;
+		z-index: 99;
+		float: right;
+
+		@include tablet {
+			width: 100%;
+		}
+
+		&__img {
+			position: relative;
+			right: -6px;
+			z-index: 50;
+			width: fit-content;
+			height: 960px;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			@include tablet {
+				display: none;
+				position: relative;
+				right: 0;
+				z-index: 50;
+				width: 100%;
+				height: 960px;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+
+		.image__wrapper {
+			position: relative;
+			width: -moz-fit-content;
+			width: fit-content;
+
+			mask: url("/assets/images_2/image-mask-left.svg");
+
+			-webkit-mask-size: cover;
+			mask-size: cover;
+		}
+
+		&__elip--green {
+			position: absolute;
+			width: 800px;
+			height: 812px;
+			left: 690px;
+			top: 160px;
+			z-index: 0;
+			background: radial-gradient(50% 50% at 50% 50%,
+					#08c982 0%,
+					rgba(255, 255, 255, 0) 100%);
+		}
+
+		&__elip--yellow {
+			position: absolute;
+			width: 500px;
+			height: 460px;
+			left: 447px;
+			top: -200px;
+			background: radial-gradient(50% 50% at 50% 50%,
+					rgba(254, 206, 99, 0.67) 0%,
+					rgba(255, 255, 255, 0) 100%);
+		}
+	}
+
+	[ant-click-animating-without-extra-node='true']::after,
+	.ant-click-animating-node {
+		animation: none;
+	}
+
+	.ant-form-item-has-error {
+		.ant-form-item-explain-error {
+			font-size: 12px;
+			margin-top: 35px;
+		}
+
+		.app__left__body__user__input,
+		.app__left__body__password__input {
+			border-color: #ff4d4f;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.app__left__header {
+		width: 285px;
+	}
+
+	.app__left__header__desc {
+		width: 100%;
+	}
+
+	.app__left__header__login {
+		width: 100%;
+		text-align: center;
+	}
+
+	.app__left__body {
+		width: 300px;
+	}
+
+	.app__left__body__user__input,
+	.app__left__body__password__input {
+		width: 80%;
+	}
+}

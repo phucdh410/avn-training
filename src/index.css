@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Work Sans';
+	src: local('Work Sans'),
+		url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap') format('truetype');
+	font-weight: bold;
+}
+
+body {
+	margin: 0;
+	font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 900;
+}

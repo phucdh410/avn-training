@@ -1,0 +1,168 @@
+@use '../../../../styles/mixin'as *;
+
+.breadcumb__left__title {
+	display: unset;
+}
+
+.category {
+	.breadcumb {
+		position: relative;
+		height: 500px;
+		@include flex(center, unset);
+		//margin-bottom: 60px;
+
+		&__left {
+			margin-left: 150px;
+			position: relative;
+			width: 50%;
+			z-index: 99;
+
+			@include tablet {
+				margin-left: 0;
+				width: 100%;
+				padding-left: 75px;
+				padding-right: 75px;
+			}
+
+			@include mobile {
+				margin-left: 20px;
+				padding-left: 0px;
+				padding-right: 0;
+				width: 100%;
+			}
+
+			&__wrap-heading {
+				position: relative;
+				width: 100%;
+			}
+
+			&__heading__item {
+				display: flex;
+				flex-wrap: wrap;
+				font-family: $font-family;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+				flex: none;
+				order: 0;
+				flex-grow: 0;
+				margin: 16px auto;
+
+				@include tablet {
+					padding-right: 0;
+				}
+
+				&--home {
+					color: #858ea7;
+
+					@include tablet {
+						color: white;
+					}
+
+					@include mobile {
+						font-weight: bold;
+						color: #fff;
+					}
+				}
+
+				&--topic {
+					color: #858ea7;
+
+					@include tablet {
+						color: white;
+					}
+
+					@include mobile {
+						font-weight: bold;
+						color: #fff;
+					}
+				}
+
+				&--category {
+					color: #000029;
+
+					@include tablet {
+						color: white;
+					}
+
+					@include mobile {
+						color: white;
+						font-weight: bold;
+					}
+				}
+			}
+
+			&__title {
+				flex: none;
+				order: 1;
+				flex-grow: 0;
+				width: 100%;
+				position: relative;
+
+				span {
+					font-family: $font-family;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 40px;
+					line-height: 56px;
+					color: #000029;
+
+					@include tablet {
+						text-align: center;
+						font-size: 30px;
+						color: white;
+						line-height: 30px;
+					}
+
+					@include mobile {
+						width: unset;
+						color: white;
+						font-size: 34px;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+
+		&__frame {
+			position: absolute;
+			z-index: 100;
+			@include flex(center, center);
+			width: 100%;
+			z-index: 1;
+
+			@include mobile {
+				opacity: 0;
+			}
+		}
+
+		&__right--copy {
+			position: relative;
+			width: 50%;
+			height: 535px;
+			right: 0;
+			top: 0px;
+
+			background: url('../../assets/img/Union.png');
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: contain;
+			// border-radius: 0px 0px 92px 0px;
+
+			@include tablet {
+				position: absolute;
+				background-size: cover;
+				background-position: center;
+				height: 800px;
+				width: 100%;
+			}
+
+			@include mobile {
+				position: absolute;
+				width: 100%;
+				height: 790px;
+			}
+		}
+	}
+}

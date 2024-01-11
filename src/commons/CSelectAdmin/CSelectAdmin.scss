@@ -1,0 +1,12 @@
+@import '../../styles/variable';
+
+.select-admin-common {
+	.ant-select-selector {
+		font-size: 13px;
+		height: 35px !important;
+		padding-right: 30px !important;
+	}
+	.ant-select-arrow {
+		margin-top: 0;
+	}
+}

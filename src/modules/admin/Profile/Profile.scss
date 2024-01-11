@@ -1,0 +1,12 @@
+@import '../../../styles/variable';
+
+.user-profile {
+	.white-block-content {
+		background-color: $color-white;
+		padding: 20px;
+		overflow-y: scroll;
+		@include mq('xl') {
+			padding: 50px;
+		}
+	}
+}

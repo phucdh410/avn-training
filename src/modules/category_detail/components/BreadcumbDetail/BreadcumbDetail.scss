@@ -1,0 +1,162 @@
+@use '../../../../styles/mixin'as *;
+
+.breadcumb-detail {
+	position: relative;
+	// height: 700px;
+	// padding: 126px 150px 0;
+	padding-top: 126px;
+	margin: 0 auto 0;
+	max-width: 1140px;
+
+	display: flex;
+	flex-direction: column;
+
+	@include tablet {
+		height: 730px;
+		padding: 126px 75px 0;
+	}
+
+	@include mobile {
+		padding: 126px 20px 0;
+	}
+
+	&__left {
+		width: 100%;
+	}
+
+	&__right {
+		width: 150px;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		position: relative;
+		z-index: 99;
+		margin-bottom: 40px;
+		line-height: 56px;
+
+		&__wrap-heading {
+			position: relative;
+			width: 100%;
+		}
+
+		&__heading__item {
+			@include flex(unset, unset);
+			flex-wrap: wrap;
+			font-family: $font-family;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 19px;
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: 16px auto;
+			width: 100%;
+
+			@include tablet {
+				padding-right: 0;
+			}
+
+			@include mobile {
+				margin: 0 auto;
+				flex-wrap: wrap;
+				font-size: 20px;
+				line-height: 30px;
+			}
+
+			&--home {
+				color: #858ea7;
+
+				@include mobile {
+					color: #000;
+				}
+			}
+
+			&--topic {
+				color: #858ea7;
+
+				@include mobile {
+					color: #000;
+				}
+			}
+
+			&--category {
+				color: #303501;
+			}
+		}
+
+		&__title {
+			flex: none;
+			order: 1;
+			align-self: stretch;
+			flex-grow: 0;
+			width: 100%;
+			position: relative;
+			@include flex(unset, unset);
+
+			span {
+				width: 100%;
+				font-family: $font-family;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 40px;
+				line-height: 56px;
+				color: #000029;
+
+				@include tablet {
+					text-align: left;
+					font-size: 30px;
+					line-height: 40px;
+				}
+
+				@include mobile {
+					width: unset;
+					color: #000;
+					font-size: 30px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		&__desc {
+			width: 100%;
+			flex: none;
+			order: 1;
+			align-self: stretch;
+			flex-grow: 0;
+			margin-top: 20px;
+			font-family: 'Work Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18.77px;
+			color: #000029;
+		}
+	}
+
+	&__frame {
+		position: absolute;
+		z-index: 100;
+		top: -15px;
+		right: 0;
+	}
+
+	&__banner {
+		width: 100%;
+		height: 360px;
+
+		//background: url('../../assets/img/category_banner.jpg');
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include mobile {
+			height: 100%;
+		}
+	}
+}

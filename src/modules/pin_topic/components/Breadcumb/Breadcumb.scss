@@ -1,0 +1,139 @@
+@use '../../../../styles/mixin'as *;
+
+.breadcumb__left__title {
+	display: unset;
+}
+
+.pin-topic-page {
+	.breadcumb {
+		position: relative;
+		height: 535px;
+		@include flex(center, unset);
+		//margin-bottom: 60px;
+
+		margin-bottom: -120px;
+		max-width: 1140px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include tablet {
+			margin-bottom: -175px;
+		}
+
+		@include tablet-2 {
+			margin-bottom: -120px;
+		}
+
+		&__left {
+			//margin-left: 150px;
+			position: relative;
+			width: 50%;
+			z-index: 99;
+
+			@include tablet {
+				margin-left: 0;
+				width: 100%;
+				padding-left: 75px;
+				padding-right: 75px;
+			}
+
+			@include mobile {
+				margin-left: 20px;
+				padding-left: 0px;
+				padding-right: 0px;
+				width: 100%;
+			}
+
+			&__wrap-heading {
+				position: relative;
+				width: 100%;
+			}
+
+			&__heading__item {
+				display: flex;
+				flex-wrap: wrap;
+				font-family: $font-family;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+				flex: none;
+				order: 0;
+				flex-grow: 0;
+				margin: 16px auto;
+
+				@include tablet {
+					padding-right: 0;
+				}
+
+				&--home {
+					color: #858ea7;
+
+					@include mobile {
+						font-weight: bold;
+					}
+				}
+
+				&--topic {
+					color: #858ea7;
+
+					@include mobile {
+						font-weight: bold;
+					}
+				}
+
+				&--category {
+					color: #000029;
+
+					@include mobile {
+						font-weight: bold;
+					}
+				}
+			}
+
+			&__title {
+				flex: none;
+				order: 1;
+				flex-grow: 0;
+				width: 100%;
+				position: relative;
+
+				span {
+					font-family: $font-family;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 40px;
+					line-height: 56px;
+					color: #000029;
+
+					@include tablet {
+						text-align: center;
+						font-size: 30px;
+						line-height: 30px;
+					}
+
+					@include mobile {
+						width: unset;
+						font-size: 34px;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+
+		&__frame {
+			margin-left: auto;
+			//margin-right: 150px;
+			z-index: 1;
+
+			@include tablet {
+				margin-right: 75px;
+			}
+
+			@include mobile {
+				display: none;
+				padding: 0;
+			}
+		}
+	}
+}

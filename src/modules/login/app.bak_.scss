@@ -1,0 +1,24 @@
+@import '../../styles/';
+@import '../../styles/mixin';
+
+
+.login {
+	background-image: url("/assets/images_2/background.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+
+	display: flex;
+}
+
+
+.image__wrapper {
+	width: -moz-fit-content;
+	width: fit-content;
+
+	mask: url("/assets/images_2/image-mask.svg");
+
+	-webkit-mask-size: contain;
+	mask-size: contain;
+}

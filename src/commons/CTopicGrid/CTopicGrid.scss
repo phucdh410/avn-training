@@ -1,0 +1,19 @@
+@use '../../styles/mixin' as *;
+
+.topic-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	gap: 24px;
+	margin-bottom: 40px;
+	width: 87%;
+
+	@include laptop-1440 {
+		width: 75%;
+	}
+
+	@include laptop {
+		width: 100%;
+		gap: 8px;
+		margin-bottom: 40px;
+	}
+}

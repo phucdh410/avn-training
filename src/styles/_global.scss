@@ -1,0 +1,318 @@
+@import './variable';
+
+:root {
+	--loading-duration: 1.5s;
+	--loading-container-size: 250px;
+	--loading-box-size: 33px;
+	--loading-box-border-radius: 15%;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
+}
+
+html {
+	font-size: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+body {
+	font-family: $font-family;
+	background-color: $body-bg;
+}
+
+button,
+input {
+	outline: 0;
+}
+
+input,
+textarea,
+select {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+ul {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+iframe {
+	border: 0;
+}
+
+textarea:focus,
+textarea:active,
+input:focus,
+input:active,
+select:focus,
+select:active {
+	outline: none;
+	box-shadow: none;
+}
+
+.client {
+	h2 {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 33px;
+	}
+
+	p {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	span {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 14px;
+	}
+}
+
+//CSS Global
+
+.icon {
+	&.search {
+		mask: url('/assets/icons/search.svg');
+		background-color: $color-primary-2;
+	}
+	&.arrow-head-left {
+		mask: url('/assets/icons/arrowhead-left.svg');
+		background-color: $color-primary-2;
+	}
+
+	&.arrow-head-right {
+		mask: url('/assets/icons/arrowhead-right.svg');
+		background-color: $color-primary-2;
+	}
+}
+
+.white-block-content {
+	padding: 30px;
+	background-color: $color-white;
+}
+
+.header-title {
+	font-size: 24px;
+}
+
+.label-input {
+	display: block;
+	font-size: 13px;
+	font-weight: 600;
+	display: inline-block;
+	color: #4b586b;
+}
+.form-title {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.btn-hide {
+	background-color: $color-hide;
+	color: $color-white;
+	border: none;
+	&:hover {
+		background-color: rgba(255, 77, 79, 0.5);
+		color: $color-white;
+	}
+}
+
+.btn-pin {
+	background-color: $color-pin;
+	color: $color-white;
+	border: none;
+	&:hover {
+		background-color: rgba(255, 77, 79, 0.5);
+		color: $color-white;
+	}
+}
+
+// CSS Overide Antd
+
+.ant-input:hover,
+.ant-input-number:hover,
+.ant-select:hover {
+	border-color: $color-primary-1 !important;
+}
+.ant-input:focus,
+.ant-input-number:focus {
+	box-shadow: none;
+}
+
+.ant-tag {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ant-pagination-item-active {
+	border-color: $color-primary-1;
+	a {
+		color: $color-primary-1;
+	}
+}
+.ant-pagination-item:focus-visible,
+.ant-pagination-item:hover {
+	border-color: $color-primary-1;
+	a {
+		color: $color-primary-1;
+	}
+}
+.ant-pagination-prev:hover {
+	.ant-pagination-item-link {
+		color: $color-primary-1;
+		border-color: $color-primary-1;
+	}
+}
+
+.ant-spin-dot-item {
+	background-color: $color-primary-1;
+}
+
+.ant-menu-horizontal {
+	> .ant-menu-item {
+		a {
+			&:hover {
+				color: $color-primary-1;
+			}
+		}
+	}
+	> .ant-menu-item-selected {
+		a {
+			color: $color-primary-1;
+		}
+	}
+}
+
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-focused {
+	box-shadow: none;
+}
+
+.ant-input-affix-wrapper,
+.ant-input-number-affix-wrapper,
+.ant-select-selector {
+	padding: 6px 0 !important;
+}
+
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-input-number-affix-wrapper {
+	border: none !important;
+	border-bottom: 2px solid #f1f1f1;
+}
+
+.ant-input-textarea {
+	textarea {
+		border: none !important;
+		border-bottom: 2px solid #f1f1f1 !important;
+		padding-left: 0;
+	}
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+	.ant-select-selector {
+	box-shadow: none;
+}
+
+.ant-input-affix-wrapper.ant-input-affix-wrapper-has-feedback {
+	box-shadow: none;
+}
+
+.ant-input-number-affix-wrapper:focus,
+.ant-input-number-affix-wrapper-focused {
+	box-shadow: none;
+}
+
+.ant-select {
+	border-bottom: 2px solid #f1f1f1;
+	&.ant-select-status-error {
+		border-color: #ff4d4f;
+	}
+}
+.ant-select-item-option {
+	max-width: 450px;
+}
+.ant-select-selection-item {
+	max-width: 450px;
+}
+
+.ant-input-suffix {
+	border-bottom: 2px solid #f1f1f1;
+	margin-left: 0;
+}
+
+.ant-input-show-count-suffix {
+	color: #f1f1f1;
+}
+
+.ant-select-selection-search {
+	margin-top: 5px;
+	left: 0;
+}
+
+// CSS Overide SweetAlert
+
+.swal2-title {
+	font-size: 1.3rem;
+}
+
+.swal2-icon {
+	&.swal2-warning {
+		width: 3rem;
+		height: 3rem;
+		margin-bottom: 0;
+	}
+
+	.swal2-icon-content {
+		font-size: 2.5rem;
+	}
+}
+
+.swal2-styled {
+	padding: 0.3rem 1.2rem;
+	&.swal2-confirm {
+		background-color: $color-primary-1;
+		&:focus {
+			box-shadow: 0 0 0 3px $color-primary-1-hover;
+		}
+	}
+}
+
+// CSS Overide Loading Overlay
+
+.loading-overlay {
+	._loading_overlay_overlay {
+		z-index: 99999;
+		display: flex;
+		justify-content: center;
+		._loading_overlay_content {
+			position: fixed;
+			top: 40%;
+		}
+	}
+}

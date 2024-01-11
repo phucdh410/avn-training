@@ -1,0 +1,75 @@
+@import '../../styles/variable';
+
+.table-common {
+	.list-actions {
+		.ant-space-item {
+			cursor: pointer;
+			.action {
+				text-align: center;
+				a {
+					color: inherit;
+				}
+				span:first-child {
+					display: block;
+					text-align: center;
+					border-radius: 50%;
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					background: #f8f8f8;
+					font-size: 15px;
+					margin: auto;
+				}
+				&:hover {
+					&.action-view {
+						span:first-child {
+							background-color: $color-primary-1;
+							color: white;
+						}
+						.icon-caption {
+							color: $color-primary-1;
+						}
+					}
+					&.action-edit {
+						span:first-child {
+							background-color: $color-primary-2;
+							color: white;
+						}
+						.icon-caption {
+							color: $color-primary-2;
+						}
+					}
+					&.action-delete {
+						span:first-child {
+							background-color: $color-delete;
+							color: $color-white;
+						}
+						.icon-caption {
+							color: $color-delete;
+						}
+					}
+					&.action-approve {
+						span:first-child {
+							background-color: $color-success;
+							color: $color-white;
+						}
+						.icon-caption {
+							color: $color-success;
+						}
+					}
+				}
+				.icon-caption {
+					text-align: center;
+					font-size: 11px;
+					line-height: 1;
+				}
+			}
+			// &:hover {
+			// 	color: $color-primary-1;
+			// }
+			// span {
+			// 	font-size: 18px;
+			// }
+		}
+	}
+}

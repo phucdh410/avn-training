@@ -1,0 +1,35 @@
+@import "../../styles/mixin";
+
+.slick-arrow {
+	z-index: 1;
+
+	color: #000;
+	background: rgba(255, 255, 255, 0.24) !important;
+	border-radius: 50% !important;
+	padding: 36px !important;
+
+	&::before {
+		display: none;
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&.slick-prev,
+	&.slick-next {
+		top: 50% !important;
+		transform: translateY(-150%) !important;
+
+		@include tablet {
+			transform: translateY(-50%) !important;
+		}
+
+		@include mobile {
+			display: none !important;
+		}
+	}
+}

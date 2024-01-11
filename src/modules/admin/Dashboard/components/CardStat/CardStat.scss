@@ -1,0 +1,40 @@
+@import '../../../../../styles/variable';
+
+.card-info-wrapper {
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center right;
+	margin-bottom: 50px;
+	.card-info {
+		position: relative;
+		z-index: 1;
+		img {
+			height: 35px;
+			width: auto;
+			margin-bottom: 10px;
+		}
+		h5 {
+			margin: 0;
+			font-size: 15px;
+			color: #2d323e;
+			&.number-value {
+				font-size: 25px;
+			}
+		}
+		.card-footer {
+			margin-top: 10px;
+		}
+		.white-block-content {
+			padding: 20px;
+			@include mq('xl') {
+				padding: 30px;
+			}
+		}
+	}
+}

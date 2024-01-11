@@ -1,0 +1,39 @@
+@import 'src/styles/mixin';
+@import '../../../../styles/variable';
+
+.related-list__items {
+	padding: 0 16px;
+
+	img {
+		margin: auto;
+		max-width: 320px;
+		width: 100%;
+		height: 150px;
+	}
+
+	@include tablet {
+		margin: 0px 4px 0px 10px;
+	}
+
+	@include mobile {
+		align-items: center;
+	}
+
+	.normal-topic__post__title {
+		margin-top: 24px;
+		margin-bottom: 16px !important;
+		font-size: 18px;
+		padding: 0 15px;
+		font-weight: 600;
+	}
+	.normal-topic__post__desc {
+		padding: 0 15px;
+	}
+	a {
+		&:hover {
+			h4 {
+				color: $color-primary-2;
+			}
+		}
+	}
+}

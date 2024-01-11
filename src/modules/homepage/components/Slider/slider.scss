@@ -1,0 +1,55 @@
+@import '../../../../styles/mixin';
+
+.banner {
+	position: relative;
+	width: 100%;
+
+	// 2 options
+	mask: url('/assets/images_2/banner-mask.svg');
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background-color: $color-white;
+
+	img {
+		width: 100%;
+		max-height: 950px;
+	}
+
+	.slider {
+		position: relative;
+
+		img {
+			width: 100%;
+		}
+
+		.slider__text {
+			position: absolute;
+			top: 15%;
+			right: 18%;
+
+			text-align: center;
+
+			width: 583px;
+
+			.slider__text__content {
+				margin-top: 24px;
+				padding: 0 65.5px;
+			}
+
+			@include mobile {
+				display: none;
+			}
+
+			@include tablet {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			@include laptop-1440 {
+				right: 18%;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/variable';
+
+.user-list {
+	height: 100%;
+	.user-add-action {
+		.label-input {
+			font-size: 15px;
+			color: #4f71ec;
+		}
+	}
+}
+
+.admin-modal {
+	.ant-modal-title {
+		color: $color-primary-2;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.ant-modal-content {
+		max-height: 90vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}

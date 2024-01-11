@@ -1,0 +1,122 @@
+@use '../../../../styles/mixin'as *;
+
+.list-detail {
+	position: relative;
+	max-width: 1140px;
+	margin: 0 auto 150px auto;
+
+	@include tablet {
+		padding: 0 60px;
+		margin-bottom: 100px;
+		padding-bottom: 150px;
+	}
+
+	@include mobile {
+		padding: 0 20px;
+	}
+
+	@media (min-width: 908px) and (max-width: 1160px) {
+		height: 750px;
+	}
+
+	&__heading {
+		@include flex(center, unset);
+		padding-bottom: 30px;
+
+		p {
+			width: 8px;
+			height: 8px;
+			background: #4f71ec;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+
+		&--title {
+			font-size: 24px;
+			font-weight: 600;
+		}
+	}
+
+	&__post {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+		gap: 20px;
+		margin-right: 12px;
+
+		@include tablet {
+			grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+		}
+
+		&__img {
+			position: relative;
+			width: 100%;
+			height: 180px;
+
+			&__btn {
+				position: absolute;
+				top: 34%;
+				left: 42%;
+
+				@include tablet {
+					left: 42%;
+				}
+			}
+		}
+
+		&__title__wrapper {
+			height: 40px;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&__title,
+		&__date,
+		&__check-btn {
+			font-family: 'Work Sans';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		&__title {
+			color: #000029;
+			margin: 24px 0px;
+			&:hover {
+				a {
+					color: $color-primary-2;
+				}
+			}
+
+			@include mobile {
+				margin: 20px 0;
+			}
+		}
+
+		&__date {
+			color: #858ea7;
+			margin-top: 32px;
+			font-weight: 400;
+
+			@include laptop {
+				margin-top: 20px;
+			}
+		}
+
+		&__button {
+			width: 100px !important;
+			margin: 24px 0px 12px 0;
+
+			@include mobile {
+				margin: 20px 0px 10px 0;
+			}
+
+			&.none {
+				opacity: 0;
+			}
+		}
+	}
+}

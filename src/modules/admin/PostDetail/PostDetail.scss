@@ -1,0 +1,78 @@
+@import '../../../styles/variable';
+
+.post-detail {
+	.white-block-content {
+		background-color: $bg-color-primary-1;
+	}
+	width: 90%;
+	margin: auto;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	@include mq('md') {
+		width: 100%;
+	}
+	@include mq('lg') {
+		margin-top: 0;
+	}
+	.header-title {
+		margin-left: 30px;
+		margin-top: 15px;
+		@include mq('md') {
+			margin-left: 45px;
+		}
+		@include mq('lg') {
+			margin-left: auto;
+			margin-top: 0;
+		}
+	}
+	.white-block-content {
+		padding: 0;
+		@include mq('xl') {
+			padding: 30px;
+		}
+	}
+	.label-input {
+		margin-bottom: 5px;
+	}
+	.select-common {
+		margin-left: 0;
+		margin-bottom: 25px;
+	}
+	.input-common,
+	.input-number-common {
+		margin-bottom: 25px;
+		input {
+			padding-left: 11px;
+		}
+	}
+	.post-info,
+	.post-type,
+	.post-test {
+		margin-top: 30px;
+		padding: 20px;
+		border-radius: 20px;
+		background-color: $color-white;
+	}
+	.post-confirm {
+		background-color: $color-white;
+		padding: 20px;
+		.ant-form-item {
+			margin-bottom: 0;
+		}
+		@include mq('xl') {
+			padding: 60px;
+			margin-left: -30px;
+		}
+	}
+	// ._loading_overlay_wrapper {
+	// 	margin: -60px -30px;
+	// }
+	.content {
+		width: 90% !important;
+		margin: auto;
+		@include mq('lg') {
+			width: auto !important;
+			margin-top: 45px;
+		}
+	}
+}

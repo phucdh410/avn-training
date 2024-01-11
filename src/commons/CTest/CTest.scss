@@ -1,0 +1,76 @@
+@use '../../styles/mixin'as *;
+
+.test {
+	max-width: 1140px;
+
+	display: flex;
+	flex-direction: column;
+
+	margin: auto;
+
+	.wrapper {
+		z-index: 500;
+		background-image: url('/assets/images_2/testing_background.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		padding: 75px 134px;
+
+		border-top-left-radius: 92px;
+		border-bottom-right-radius: 92px;
+
+		@include tablet {
+			padding: 40px 20px;
+			margin: 0 60px;
+		}
+
+		@include mobile {
+			padding: 75px 20px;
+			margin: 0 20px;
+		}
+
+		.content {
+			font-size: 32px;
+			font-weight: 600;
+
+			max-width: 538px;
+
+			@include tablet {
+				font-size: 24px;
+			}
+
+			@include mobile {
+				font-size: 24px;
+			}
+		}
+
+		.link {
+			color: #4f71ec;
+		}
+
+		.icon.goto {
+			mask: url('/assets/icons/goto.svg');
+			mask-repeat: no-repeat;
+			mask-position: center;
+			background: white;
+		}
+
+		button.button {
+			align-items: stretch;
+
+			&:disabled {
+				color: #596585 !important;
+				background: #122654 !important;
+				pointer-events: none;
+
+				.icon {
+					background: #596585 !important;
+				}
+			}
+		}
+	}
+}

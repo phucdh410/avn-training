@@ -1,0 +1,27 @@
+@import '../../../../../styles/variable';
+
+.header-right {
+	&.ant-layout-header {
+		padding: 0;
+	}
+	.ant-menu-horizontal:not(.ant-menu-dark) {
+		& > .ant-menu-item:hover {
+			color: $color-primary-1;
+			&::after {
+				border-bottom: 2px solid $color-primary-1;
+			}
+		}
+		& > .ant-menu-item-selected {
+			color: $color-primary-1;
+			&::after {
+				border-bottom: 2px solid $color-primary-1;
+			}
+		}
+	}
+	.ant-avatar {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		margin-top: 10px;
+	}
+}

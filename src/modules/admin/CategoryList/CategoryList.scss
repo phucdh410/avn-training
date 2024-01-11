@@ -1,0 +1,11 @@
+@import '../../../styles/variable';
+
+.category-list {
+	height: 100%;
+	.select-filter {
+		.label-input {
+			font-size: 15px;
+			color: $color-primary-2;
+		}
+	}
+}

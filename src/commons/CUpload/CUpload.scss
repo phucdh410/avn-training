@@ -1,0 +1,36 @@
+@import '../../styles/variable';
+
+.upload-common {
+	.label-input {
+		margin-bottom: 20px !important;
+	}
+	.uploader {
+		background: #fcfcfc;
+		border-radius: 15px;
+		border: 5px solid #ccc;
+		border-style: dashed;
+		padding-bottom: 10px;
+		text-align: center;
+		.icon-upload {
+			font-size: 50px;
+			//color: $color-white;
+		}
+		h5 {
+			margin: 15px 0;
+			font-size: 18px;
+		}
+		.description {
+			font-size: 12px;
+			color: #aaa;
+			margin-bottom: 0;
+			margin-top: 20px;
+		}
+		.ant-upload.ant-upload-drag {
+			border: none;
+			padding: 20px;
+		}
+		&:hover {
+			border-color: $color-primary-1;
+		}
+	}
+}

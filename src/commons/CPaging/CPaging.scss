@@ -1,0 +1,76 @@
+@use '../../styles/mixin'as *;
+@import '../../styles/variable';
+
+.paging-wrapper {
+	width: 100%;
+}
+
+.paging-common-wrap {
+	margin-left: auto;
+	display: flex;
+	align-items: baseline;
+	max-width: 1140px !important;
+
+	@include tablet {
+		margin: auto;
+	}
+
+	.paging-common {
+		display: flex;
+		vertical-align: middle;
+		align-items: baseline;
+
+		.ant-pagination-item {
+			border-radius: 50%;
+			font-size: 16px;
+			border: none;
+			font-weight: 600;
+			background-color: #f9fafe;
+
+			&:hover {
+				border-color: #4f71ec;
+
+				a {
+					color: #4f71ec;
+				}
+			}
+
+			&.ant-pagination-item-active {
+				background-color: #4f71ec;
+
+				a {
+					color: $color-white;
+				}
+			}
+		}
+
+		.ant-pagination-item-link {
+			border: none !important;
+			background-color: #f9fafe;
+			font-size: 16px;
+			font-weight: 600;
+			margin-top: -3px;
+
+			&:hover {
+				color: #4f71ec !important;
+			}
+		}
+	}
+
+	.first-page,
+	.last-page {
+		p {
+			font-size: 16px;
+			font-weight: 600;
+		}
+
+		&:hover {
+			color: #4f71ec;
+			cursor: pointer;
+		}
+
+		@include mobile {
+			display: none;
+		}
+	}
+}

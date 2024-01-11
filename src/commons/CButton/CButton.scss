@@ -1,0 +1,51 @@
+.button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 16px;
+	cursor: pointer;
+	position: static;
+	background-color: #4f71ec;
+	color: white;
+	border-radius: 100px;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	border: none;
+	height: 40px;
+
+	&-primary {
+		font-weight: bold;
+		color: #4f71ec;
+	}
+
+	&-info {
+		background-color: #4f71ec !important;
+	}
+}
+
+.btn-tp {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: static;
+	//width: 83px;
+	//height: 35px;
+	left: 0px;
+	top: 0px;
+	background: #08c982;
+	border-radius: 100px;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: #ffffff;
+	border: none;
+	padding: 5px 15px;
+}

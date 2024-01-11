@@ -1,0 +1,24 @@
+@import '../../styles/variable';
+
+.tab-admin-common {
+	font-size: 13px;
+	padding-left: 0;
+	list-style: none;
+	margin-left: -5px;
+	padding-left: 5px;
+	color: $color-link;
+	vertical-align: middle;
+	border: 1px solid #f1f1f1;
+	display: inline-block;
+	border-radius: 50px;
+	padding: 4px 15px;
+	font-size: 13px;
+	&:hover {
+		color: $color-primary-2;
+		border-color: $color-primary-2;
+	}
+	&.active {
+		border-color: $color-primary-2;
+		color: $color-primary-2;
+	}
+}
