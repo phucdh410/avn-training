@@ -5,13 +5,13 @@ import {
 	MenuUnfoldOutlined,
 	UserOutlined,
 	LogoutOutlined,
-	KeyOutlined,
+	// KeyOutlined,
 } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 import { useHistory, withRouter } from 'react-router';
 import { UserContext } from 'src/contexts/user.context';
 import './RightHeader.scss';
-import { ROUTE_ADMIN } from 'src/configs/route.config';
+// import { ROUTE_ADMIN } from 'src/configs/route.config';
 
 const RightHeaderComponent = ({ toogleSidebar, isSidebarCollapsed }) => {
 	const history = useHistory();
@@ -24,18 +24,18 @@ const RightHeaderComponent = ({ toogleSidebar, isSidebarCollapsed }) => {
 		history.push('/login');
 	};
 
-	const handleChangePassword = async () => {
-		history.push(
-			`${ROUTE_ADMIN.ACCOUNT.BASE}${ROUTE_ADMIN.ACCOUNT.CHANGE_PASSWORD}`,
-		);
-	};
+	// const handleChangePassword = async () => {
+	// 	history.push(
+	// 		`${ROUTE_ADMIN.ACCOUNT.BASE}${ROUTE_ADMIN.ACCOUNT.CHANGE_PASSWORD}`,
+	// 	);
+	// };
 
 	const menuItems = [
-		{
-			key: '1',
-			label: <button onClick={handleChangePassword}>Đổi mật khẩu</button>,
-			icon: <KeyOutlined />,
-		},
+		// {
+		// 	key: '1',
+		// 	label: <button onClick={handleChangePassword}>Đổi mật khẩu</button>,
+		// 	icon: <KeyOutlined />,
+		// },
 		{
 			key: '2',
 			label: <button onClick={handleLogout}>Đăng xuất</button>,

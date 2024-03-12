@@ -88,7 +88,11 @@ export const NormalTopic = ({ data }) => {
 					<CTopicCard
 						key={topic?._id}
 						className="normal-topic__post__item"
-						image={getLinkImage(topic?.file?.path)}
+						image={getLinkImage(
+							topic?.banner
+								? topic.banner?.path
+								: topic?.file?.path,
+						)}
 						title={topic?.name}
 						description={topic?.description}
 						href={`/topic/${topic?.slug}`}

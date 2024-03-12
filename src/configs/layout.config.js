@@ -4,7 +4,7 @@ import {
 	FileSearchOutlined,
 	FileAddOutlined,
 	UserOutlined,
-	EditOutlined,
+	// EditOutlined,
 	PropertySafetyOutlined,
 	MoneyCollectOutlined,
 	AccountBookOutlined,
@@ -37,11 +37,11 @@ export const SIDEBAR_MENU = [
 				href: ROUTE_ADMIN.ACCOUNT.LIST,
 				icon: <UserOutlined />,
 			},
-			{
-				title: 'Import tài khoản',
-				href: ROUTE_ADMIN.ACCOUNT.IMPORT,
-				icon: <EditOutlined />,
-			},
+			// {
+			// 	title: 'Import tài khoản',
+			// 	href: ROUTE_ADMIN.ACCOUNT.IMPORT,
+			// 	icon: <EditOutlined />,
+			// },
 			// {
 			// 	title: 'Thông tin tài khoản',
 			// 	href: ROUTE_ADMIN.ACCOUNT.PROFILE,

@@ -24,7 +24,7 @@ export const UserModal = ({
 }) => {
 	const [form] = Form.useForm();
 
-	const [isAdminUser, setIsAdminUser] = useState(0);
+	const [, setIsAdminUser] = useState(0);
 
 	useEffect(() => {
 		if (defaultValue) {
@@ -172,14 +172,14 @@ export const UserModal = ({
 			className="admin-modal user-modal"
 		>
 			<Form form={form}>
-				<CInputAdmin
+				{/* <CInputAdmin
 					label="Mã nhân viên*"
 					placeholder="Nhập mã nhân viên ..."
 					name="username"
 					rules={FORM_RULES.USER.MSSV}
 					disabled={mode === 'update'}
-				/>
-				{mode === 'create' ? (
+				/> */}
+				{/* {mode === 'create' ? (
 					<CInputAdmin
 						label="Mật khẩu*"
 						placeholder="Nhập mật khẩu ..."
@@ -189,47 +189,31 @@ export const UserModal = ({
 					/>
 				) : (
 					''
-				)}
+				)} */}
 
-				<CInputAdmin
+				{/* <CInputAdmin
 					label="Tên*"
 					placeholder="Nhập tên ..."
 					name="name"
 					rules={FORM_RULES.USER.NAME}
-				/>
+				/> */}
 				{/* <CInputAdmin
 					label="Ngày sinh"
 					placeholder="Nhập ngày sinh ..."
 					name="birthday"
 				/> */}
-				<CInputAdmin
+				{/* <CInputAdmin
 					label="Email*"
 					placeholder="Nhập email ..."
 					name="email"
 					rules={FORM_RULES.USER.EMAIL}
-				/>
-				<CInputAdmin
+				/> */}
+				{/* <CInputAdmin
 					label="Số điện thoại"
 					placeholder="Nhập số diện thoại ..."
 					name="phoneNumber"
 					rules={FORM_RULES.USER.PHONE}
-				/>
-				<CSelectAdmin
-					label="Giới tính*"
-					placeholder="Chọn giới tính"
-					name="gender"
-					rules={FORM_RULES.USER.GENDER}
-					options={[
-						{
-							content: 'Nam',
-							value: true,
-						},
-						{
-							content: 'Nữ',
-							value: false,
-						},
-					]}
-				/>
+				/> */}
 
 				<CSelectAdmin
 					label="Loại tài khoản*"
@@ -252,8 +236,30 @@ export const UserModal = ({
 					onChange={onChangeUserType}
 					defaultValue={mode === 'create' ? 0 : defaultValue?.isAdmin}
 				/>
+				<CSelectAdmin
+					label="Giới tính*"
+					placeholder="Chọn giới tính"
+					name="gender"
+					rules={FORM_RULES.USER.GENDER}
+					options={[
+						{
+							content: 'Nam',
+							value: true,
+						},
+						{
+							content: 'Nữ',
+							value: false,
+						},
+					]}
+				/>
+				<CInputAdmin
+					label="Đơn vị*"
+					placeholder="Nhập tên đơn vị làm việc ..."
+					name="unit"
+					rules={FORM_RULES.USER.UNIT}
+				/>
 
-				{isAdminUser === 0 ? (
+				{/* {isAdminUser === 0 ? (
 					<>
 						<CInputAdmin
 							label="Phòng ban*"
@@ -282,7 +288,7 @@ export const UserModal = ({
 					</>
 				) : (
 					''
-				)}
+				)} */}
 
 				<CSelectAdmin
 					label="Ngôn ngữ*"

@@ -13,10 +13,10 @@ export class MainApi {
 	}
 
 	abstract = async (path, data, method = METHOD_AXIOS.GET) => {
-		// const token = localStorage.getItem('token');
-		const token =
-			'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThiN2E1MDEzZjFhYTlhZTBmYjEyZTUiLCJ0b2tlbl9pZCI6IjE0MTVjNGJiLWVjYTMtNGZjOS1iZGJkLWU5MmU5YWM2NTU2MCIsIm5hbWUiOiJGb3IgR3VtaSB2ZW5kb3IgLSBUcmFpbmluZyBXZWJzaXRlIiwiYXZhdGFyIjoiIiwibGFuZyI6WyJ2aSIsImVuIl0sImdyb3VwIjoiYWRtaW4iLCJpYXQiOjE3MDQ5MzczODMsImV4cCI6MTcwNTAyMzc4M30.goumCHxX3hh98oS_Nwun5MBxZ0RIME6kiyyy78WJCBs';
-		localStorage.setItem('token', token); // Xóa đi sau khi test
+		const token = localStorage.getItem('token');
+		// const token =
+		// 	'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThiN2E1MDEzZjFhYTlhZTBmYjEyZTUiLCJ0b2tlbl9pZCI6IjE0MTVjNGJiLWVjYTMtNGZjOS1iZGJkLWU5MmU5YWM2NTU2MCIsIm5hbWUiOiJGb3IgR3VtaSB2ZW5kb3IgLSBUcmFpbmluZyBXZWJzaXRlIiwiYXZhdGFyIjoiIiwibGFuZyI6WyJ2aSIsImVuIl0sImdyb3VwIjoiYWRtaW4iLCJpYXQiOjE3MDQ5MzczODMsImV4cCI6MTcwNTAyMzc4M30.goumCHxX3hh98oS_Nwun5MBxZ0RIME6kiyyy78WJCBs';
+		// localStorage.setItem('token', token); // Xóa đi sau khi test
 
 		const config = {
 			method,

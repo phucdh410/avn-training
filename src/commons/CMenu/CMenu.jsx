@@ -176,7 +176,7 @@ export const CMenu = ({ isShow, onClose }) => {
 
 							<div className="menu-item-sub">
 								<div className="topic">
-									{normalTopics?.data?.results
+									{normalTopics?.data
 										?.sort((a, b) => {
 											if (a.sortOrder !== b.sortOrder) {
 												return (

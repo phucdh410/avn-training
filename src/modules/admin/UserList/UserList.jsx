@@ -21,22 +21,23 @@ import {
 	onDeleteUser,
 } from 'src/redux/user/user.action';
 import {
-	alertFail,
+	// alertFail,
 	alertSuccess,
 	alertWarning,
 	alertWarningDelete,
 } from 'src/utils/alert.util';
 import {
 	DeleteOutlined,
-	EditOutlined,
+	// EditOutlined,
+	UserSwitchOutlined,
 	EyeInvisibleOutlined,
 	EyeOutlined,
 } from '@ant-design/icons';
 import { useDebouncedCallback } from 'use-debounce';
 import { objRemovePropertyEmpty } from 'src/utils/function.util';
-import axios from 'axios';
-import fileDownload from 'js-file-download';
-import Swal from 'sweetalert2';
+// import axios from 'axios';
+// import fileDownload from 'js-file-download';
+// import Swal from 'sweetalert2';
 
 const UserListContainer = ({
 	users,
@@ -128,6 +129,11 @@ const UserListContainer = ({
 		setUserDetail(data);
 	};
 
+	// const onUpdateInfo = data => {
+	// 	onShowModal(true);
+	// 	setUserDetail(data);
+	// };
+
 	const onClickHideUser = (id, status) => {
 		if (status === true) {
 			setLoadingOverLay(true);
@@ -171,41 +177,41 @@ const UserListContainer = ({
 		onGetListUser(query);
 	};
 
-	const onExport = async () => {
-		Swal.fire({
-			title: 'Đang xuất dữ liệu...',
-			allowOutsideClick: false,
-			didOpen: async () => {
-				Swal.showLoading();
+	// const onExport = async () => {
+	// 	Swal.fire({
+	// 		title: 'Đang xuất dữ liệu...',
+	// 		allowOutsideClick: false,
+	// 		didOpen: async () => {
+	// 			Swal.showLoading();
 
-				const token = localStorage.getItem('token');
+	// 			const token = localStorage.getItem('token');
 
-				const headers = {
-					Authorization: `Bearer ${token}`,
-					responseType: 'blob',
-				};
-				await axios
-					.get(
-						`${process.env.REACT_APP_API_URL}/api/accounts/export`,
-						{
-							headers,
-							responseType: 'blob',
-						},
-					)
-					.then(({ data }) => {
-						fileDownload(data, 'dsnv.xlsx');
-						alertSuccess('Xuất danh sách nhân viên thành công!');
-					})
-					.catch(err => {
-						console.log(err);
-						alertFail(
-							'Có lỗi xảy ra!',
-							'Không thể xuất danh sách.',
-						);
-					});
-			},
-		});
-	};
+	// 			const headers = {
+	// 				Authorization: `Bearer ${token}`,
+	// 				responseType: 'blob',
+	// 			};
+	// 			await axios
+	// 				.get(
+	// 					`${process.env.REACT_APP_API_URL}/api/accounts/export`,
+	// 					{
+	// 						headers,
+	// 						responseType: 'blob',
+	// 					},
+	// 				)
+	// 				.then(({ data }) => {
+	// 					fileDownload(data, 'dsnv.xlsx');
+	// 					alertSuccess('Xuất danh sách nhân viên thành công!');
+	// 				})
+	// 				.catch(err => {
+	// 					console.log(err);
+	// 					alertFail(
+	// 						'Có lỗi xảy ra!',
+	// 						'Không thể xuất danh sách.',
+	// 					);
+	// 				});
+	// 		},
+	// 	});
+	// };
 
 	return (
 		<section className="user-list">
@@ -234,7 +240,7 @@ const UserListContainer = ({
 							showIconSearch
 						/>
 					</div>
-					<div className="flex space-x-5">
+					{/* <div className="flex space-x-5">
 						<Button
 							type="primary"
 							className="mb-5 transition-all duration-150"
@@ -249,7 +255,7 @@ const UserListContainer = ({
 						>
 							Thêm nhân viên mới
 						</Button>
-					</div>
+					</div> */}
 				</div>
 				<CTable
 					columns={[
@@ -266,9 +272,15 @@ const UserListContainer = ({
 									<Button
 										type="primary"
 										className="btn-actions"
-										icon={<EditOutlined />}
+										icon={<UserSwitchOutlined />}
 										onClick={() => onEdit(data)}
 									/>
+									{/* <Button
+										type="primary"
+										className="btn-actions"
+										icon={<EditOutlined />}
+										onClick={() => onEdit(data)}
+									/> */}
 									{data?.active ? (
 										<Button
 											className="ml-2 btn-actions btn-hide"

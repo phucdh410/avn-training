@@ -61,14 +61,14 @@ export const USER_COLUMS = [
 		align: 'center',
 		ellipsis: true,
 	},
-	{
-		title: 'Giới tính',
-		dataIndex: 'gender',
-		key: 'gender',
-		align: 'center',
-		render: gender => (gender ? 'Nam' : 'Nữ'),
-		ellipsis: true,
-	},
+	// {
+	// 	title: 'Giới tính',
+	// 	dataIndex: 'gender',
+	// 	key: 'gender',
+	// 	align: 'center',
+	// 	render: gender => (gender ? 'Nam' : 'Nữ'),
+	// 	ellipsis: true,
+	// },
 	// {
 	// 	title: 'Loại tài khoản',
 	// 	dataIndex: 'isAdmin',
