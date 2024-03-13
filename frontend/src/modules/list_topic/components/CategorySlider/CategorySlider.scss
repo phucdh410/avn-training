@@ -1,0 +1,174 @@
+@use '../../../../styles/mixin'as *;
+
+.category-slider {
+	margin: 0 auto;
+	// height: 470px;
+	max-width: 1140px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	@include tablet {
+		height: unset;
+		margin: 50px 73px;
+	}
+
+	@include mobile {
+		height: unset;
+		margin: 30px 18px;
+	}
+
+	&__img {
+		position: relative;
+		width: 100%;
+		padding-bottom: 30px;
+
+		&__list {
+			@include flex(center, center);
+
+			@include tablet {
+				flex-wrap: wrap;
+			}
+		}
+
+		&__item {
+			left: 0px;
+			top: 0px;
+			margin: 0px 24px;
+
+			@include tablet {
+				margin: 16px 7px;
+			}
+
+			&--image {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				inset: 0;
+				// min-width: 267px;
+				// height: 267px;
+				// width: 267px;
+				border-radius: 50%;
+				margin: auto;
+
+				@include tablet {
+					// min-width: 250px;
+					// width: 250px;
+					// height: 250px;
+				}
+			}
+
+			&--title {
+				color: #000029;
+				margin: 24px 0px;
+
+				&:hover {
+					color: $color-primary-2;
+				}
+
+				@include tablet {
+					width: 250px;
+				}
+
+				@include mobile {
+					width: 230px;
+				}
+			}
+		}
+	}
+
+	.slick-arrow {
+		&.slick-prev {
+			left: -100px !important;
+
+			@include tablet {
+				left: -50px !important;
+			}
+
+			@include mobile {
+				left: -50px !important;
+			}
+		}
+
+		&.slick-next {
+			right: -100px !important;
+
+			@include tablet {
+				right: -50px !important;
+			}
+
+			@include mobile {
+				right: -50px !important;
+			}
+		}
+	}
+}
+
+.category-slider__img__list .slick-slide {
+	min-width: 1px;
+	// width: 310px !important;
+
+	// @include tablet {
+	// 	width: 310px !important;
+	// }
+
+	// @include mobile {
+	// 	width: 260px !important;
+	// }
+}
+
+.next-btn-topic {
+	right: -45px !important;
+	top: 166px !important;
+
+	@include tablet {
+		right: -42px !important;
+		top: 40% !important;
+	}
+
+	@include mobile {
+		right: -7px !important;
+		top: 40% !important;
+	}
+}
+
+.prev-btn-topic {
+	left: -93px !important;
+	top: 166px !important;
+
+	@include tablet {
+		left: -76px !important;
+		top: 40% !important;
+	}
+
+	@include mobile {
+		left: -16px !important;
+		top: 40% !important;
+	}
+}
+
+.category-slider__img__list .slick-dots {
+	bottom: -27% !important;
+
+	@include tablet {
+		bottom: -12% !important;
+	}
+
+	@include mobile {
+		bottom: -12% !important;
+	}
+}
+
+.next-btn-topic::before {
+	filter: invert(0%) sepia(100%) saturate(7%) hue-rotate(164deg)
+		brightness(99%) contrast(103%);
+	color: #000;
+}
+
+.prev-btn-topic::before {
+	filter: invert(0%) sepia(100%) saturate(7%) hue-rotate(164deg)
+		brightness(99%) contrast(103%);
+	color: #000;
+}

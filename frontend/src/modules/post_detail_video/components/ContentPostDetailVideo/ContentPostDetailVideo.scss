@@ -1,0 +1,103 @@
+@use '../../../../styles/mixin'as *;
+@import '../../../../styles/variable';
+
+.content-post__video {
+	position: relative;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	background-color: $color-white;
+
+	@include tablet {
+		padding: 0 60px;
+	}
+
+	@include mobile {
+		padding: 0 20px;
+	}
+
+	&__title {
+		font-family: 'Work Sans';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 56px;
+		color: #000029;
+		flex: none;
+		order: 0;
+		align-self: stretch;
+		flex-grow: 0;
+		//padding-right: 240px;
+		flex-wrap: wrap;
+		display: flex;
+
+		@include tablet {
+			padding: 0;
+			text-align: center;
+		}
+
+		@include mobile {
+			text-align: center;
+			font-size: 46px;
+		}
+	}
+
+	&__content {
+		background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.2),
+				rgba(0, 0, 0, 0.2)
+			),
+			url('../../../post_detail/assets/img/imgslider.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+
+		// height: 530px;
+		// width: 100% !important;
+		// margin-top: 20px;
+
+		// @include mobile {
+		// 	height: 310px;
+		// }
+
+		&__img {
+			position: absolute;
+			left: 47%;
+			top: 44%;
+			width: 6%;
+			cursor: pointer;
+
+			@include tablet {
+				left: 44%;
+				top: 42%;
+				width: 12%;
+			}
+		}
+	}
+
+	.aspect-ratio-video {
+		position: relative;
+		margin-top: 20px;
+		aspect-ratio: 16/9;
+		width: 100%;
+		height: auto;
+		.content-post__video__content {
+			position: absolute;
+			width: 100% !important;
+			height: 100% !important;
+			inset: 0;
+		}
+	}
+
+	&__desc {
+		margin-top: 40px;
+		text-align: left;
+		padding-bottom: 40px;
+	}
+}
