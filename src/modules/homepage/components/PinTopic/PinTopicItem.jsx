@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import { useTranslation } from 'react-i18next';
 
-export const PinTopicItem = ({ image, title, slug, description, detail }) => {
+export const PinTopicItem = ({ image, title, slug, description }) => {
 	const { t } = useTranslation();
 	return (
 		<CSection className="topic-item">
@@ -21,7 +21,7 @@ export const PinTopicItem = ({ image, title, slug, description, detail }) => {
 			<div className="content__wrapper">
 				<div className="content">
 					<div className="topic-button">
-						<CButtonTopic>{detail?.name || 'Chủ đề'} </CButtonTopic>
+						<CButtonTopic>{t('topic_short')} </CButtonTopic>
 					</div>
 					<div className="title">
 						<a href={`/category/${slug}`}>
