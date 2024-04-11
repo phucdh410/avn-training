@@ -89,6 +89,8 @@ export const ContentPostDetailVideo = ({
 	};
 
 	const onChange = async duration => {
+		if (statusView?.done) return; //Đã done thì không gọi onChange nữa
+
 		if (userContext?.name || userContext?.username) {
 			if (parseInt(duration.playedSeconds) > 3) {
 				await api.postUser.updateStatusViewed({
